@@ -1,0 +1,72 @@
+main {
+  @include flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: $secondary-color;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+
+  & img {
+    width: 100%;
+  }
+
+  & .movie__info {
+    @include flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+
+    & h3 {
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    & span {
+      font-size: 1.2rem;
+      background-color: $primary-color;
+      padding: 0.25rem 0.5rem;
+      border-radius: 3px;
+      font-weight: 400;
+    }
+  }
+}
+
+.movie__info span.green {
+  color: $color-rating-primary;
+}
+
+.movie__info span.orange {
+  color: $color-rating-secondary;
+}
+
+.movie__info span.red {
+  color: $color-rating-tertiary;
+}
+
+.movie__overview {
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: $primary-text-color;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: all 0.3s ease-in;
+}
+
+.movie:hover .movie__overview {
+  transform: translateY(0);
+}

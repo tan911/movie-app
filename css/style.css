@@ -1,0 +1,111 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #22254b;
+  font-family: "Roboto", sans-serif;
+  color: #fff; }
+
+@media (max-width: 23.5em) {
+  html {
+    font-size: 50%; } }
+
+.form__container {
+  position: relative; }
+
+header {
+  background-color: #3b3b69;
+  display: flex;
+  padding: 1rem;
+  justify-content: flex-end; }
+
+.search {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  letter-spacing: 2px;
+  font-size: 2.4rem;
+  color: #fff;
+  padding: 1rem 1rem 1rem 6rem;
+  transition: all 0.3s; }
+  .search::placeholder {
+    color: #9ca3af; }
+  .search:focus {
+    background-color: #22254b;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2); }
+
+.search-icon {
+  position: absolute;
+  font-size: 2.5rem;
+  left: 15px;
+  top: 11px; }
+  @media (max-width: 23.5em) {
+    .search-icon {
+      top: 9px; } }
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: #3b3b69;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; }
+  .movie img {
+    width: 100%; }
+  .movie .movie__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px; }
+    .movie .movie__info h3 {
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 0; }
+    .movie .movie__info span {
+      font-size: 1.2rem;
+      background-color: #22254b;
+      padding: 0.25rem 0.5rem;
+      border-radius: 3px;
+      font-weight: 400; }
+
+.movie__info span.green {
+  color: #4ade80; }
+
+.movie__info span.orange {
+  color: #fb923c; }
+
+.movie__info span.red {
+  color: #f87171; }
+
+.movie__overview {
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: all 0.3s ease-in; }
+
+.movie:hover .movie__overview {
+  transform: translateY(0); }

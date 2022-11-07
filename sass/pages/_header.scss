@@ -1,0 +1,42 @@
+.form__container {
+  position: relative;
+}
+
+header {
+  background-color: $secondary-color;
+  @include flex;
+  padding: 1rem;
+  justify-content: flex-end;
+}
+
+.search {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  letter-spacing: 2px;
+  font-size: 2.4rem;
+  color: $primary-text-color;
+  padding: 1rem 1rem 1rem 6rem;
+  transition: all 0.3s;
+
+  &::placeholder {
+    color: #9ca3af;
+  }
+
+  &:focus {
+    background-color: $primary-color;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.search-icon {
+  position: absolute;
+  font-size: 2.5rem;
+  left: 15px;
+  top: 11px;
+
+  @media (max-width: 23.5em) {
+    top: 9px;
+  }
+}
